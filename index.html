@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Hardware | House of Hardwares — Udaipur</title>
+  <meta name="description" content="National Hardware (House of Hardwares), Ashwini Bazaar, Hathipole, Udaipur. Premium S.S. door handles, cabinet pulls, mortise locks. Browse catalog prices and order for delivery across Udaipur & Southern Rajasthan." />
+  <meta name="keywords" content="National Hardware Udaipur, House of Hardwares, door handles Udaipur, cabinet handles Udaipur, hardware shop Hathipole" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="National Hardware | House of Hardwares — Udaipur" />
+  <meta property="og:description" content="Premium S.S. architectural handles & hardware. Browse real catalog prices. Order for delivery or visit Hathipole showroom." />
+  <meta property="og:image" content="assets/branding/flatlay-curated.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeGoodsStore",
+    "name": "National Hardware",
+    "alternateName": "House of Hardwares",
+    "telephone": "+91-9414058177",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ashwini Bazaar, Hathipole",
+      "addressLocality": "Udaipur",
+      "addressRegion": "Rajasthan",
+      "postalCode": "313001",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+  <header class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="brand">
+        <span class="brand-name">National Hardware</span>
+        <span class="brand-tag">House of Hardwares</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#catalog" class="nav-link">Catalogue</a>
+        <a href="#contact" class="nav-link">Showroom</a>
+        <a href="https://wa.me/919414058177?text=Hello%20Sunil%20Ji%20Seth,%20I%20need%20assistance%20with%20a%20product." target="_blank" rel="noopener" class="nav-link wa-link">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.496 2 2 6.5 2 12.043c0 1.947.556 3.766 1.523 5.313L2.2 22l4.823-1.265c1.472.846 3.176 1.308 5.008 1.308 5.535 0 10.031-4.5 10.031-10.043C22.062 6.5 17.566 2 12.031 2z"/></svg>
+          WhatsApp
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="cart-btn" id="openCartBtn" aria-label="Open quote cart">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span>Cart</span>
+          <span class="cart-count" id="cartBadgeCount" style="display:none;">0</span>
+        </button>
+        <button type="button" class="menu-btn" id="mobileMenuToggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── HERO ──────────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <h1 class="hero-headline">Premium Hardware</h1>
+      <p class="hero-sub">Browse 18+ stainless steel handle models. Pick your size, finish, and order — delivered to your door or collect from our showroom.</p>
+      <div class="hero-btns">
+        <a href="#catalog" class="btn-primary">Browse Catalogue</a>
+        <a href="https://wa.me/919414058177?text=Hello%20Sunil%20Ji%20Seth,%20I%20need%20help%20with%20an%20order." target="_blank" rel="noopener" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.496 2 2 6.5 2 12.043c0 1.947.556 3.766 1.523 5.313L2.2 22l4.823-1.265c1.472.846 3.176 1.308 5.008 1.308 5.535 0 10.031-4.5 10.031-10.043C22.062 6.5 17.566 2 12.031 2z"/></svg>
+          Order on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CATALOGUE ─────────────────────────────────────────── -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+
+      <!-- Section label -->
+      <div class="catalog-header">
+        <div>
+          <h2 class="section-title">Cabinet &amp; Door Handles</h2>
+        </div>
+        <span class="product-count" id="activeProductsCount">18 Models</span>
+      </div>
+
+      <!-- Controls -->
+      <div class="catalog-controls">
+        <div class="tier-toggle" role="group" aria-label="Finish tier">
+          <button type="button" class="tier-btn active" id="tierStandardBtn">Standard &nbsp;<span class="tier-sub">C.P · Z.B · S.N</span></button>
+          <button type="button" class="tier-btn" id="tierPremiumBtn">Royal PVD &nbsp;<span class="tier-sub">R.G · G.D · C.B</span></button>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Populated by js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── CONTACT STRIP ─────────────────────────────────────── -->
+  <section class="contact-strip" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-block">
+        <span class="contact-label">Showroom</span>
+        <span class="contact-value">Ashwini Bazaar, Hathipole, Udaipur — 313001</span>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-block">
+        <span class="contact-label">Call / WhatsApp</span>
+        <a href="tel:+919414058177" class="contact-value contact-phone">+91 94140 58177</a>
+      </div>
+      <div class="contact-divider"></div>
+      <div class="contact-block">
+        <span class="contact-label">Hours</span>
+        <span class="contact-value">Mon–Sat 10am–8:30pm &nbsp;·&nbsp; Sun 11am–4pm</span>
+      </div>
+      <div class="contact-divider"></div>
+      <a href="https://maps.google.com/?q=National+Hardware+Ashwini+Bazaar+Hathipole+Udaipur+313001" target="_blank" rel="noopener" class="btn-map">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Get Directions
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 National Hardware &nbsp;·&nbsp; House of Hardwares &nbsp;·&nbsp; Hathipole, Udaipur</span>
+      <span class="footer-owner">Proprietor: Sunil Ji Seth &nbsp;·&nbsp; +91 9414058177</span>
+    </div>
+  </footer>
+
+  <!-- ── PRODUCT MODAL ──────────────────────────────────────── -->
+  <div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal-box">
+      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close">✕</button>
+      <div class="modal-grid">
+        <!-- Image -->
+        <div class="modal-img-wrap">
+          <img id="modalImage" src="" alt="Product Detail" />
+        </div>
+        <!-- Info -->
+        <div class="modal-info">
+          <span class="modal-code" id="modalCode"></span>
+          <h2 class="modal-name" id="modalName"></h2>
+          <p class="modal-desc" id="modalDesc"></p>
+          <p class="modal-material"><strong>Material:</strong> <span id="modalMaterial"></span></p>
+
+          <button type="button" class="btn-primary modal-add-btn" id="modalAddQuoteBtn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Add to Cart
+          </button>
+
+          <!-- Pricing Table -->
+          <div class="price-table-wrap">
+            <table class="price-table">
+              <thead>
+                <tr>
+                  <th>Size (C.C)</th>
+                  <th>Standard</th>
+                  <th>Royal PVD</th>
+                  <th>Pcs/Box</th>
+                </tr>
+              </thead>
+              <tbody id="modalPriceTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── QUOTE DRAWER ───────────────────────────────────────── -->
+  <aside class="drawer" id="quoteDrawer" aria-label="Quote cart">
+    <div class="drawer-head">
+      <span class="drawer-title">Your Cart</span>
+      <button type="button" class="drawer-close" id="closeCartBtn" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-body" id="drawerItemsList"></div>
+    <div class="drawer-foot">
+      <div class="drawer-total">
+        <span>Estimated Total</span>
+        <span class="drawer-total-amt" id="drawerSubtotal">₹0</span>
+      </div>
+      <input type="text" id="custName" class="drawer-input" placeholder="Your name / contractor" />
+      <input type="text" id="custAddress" class="drawer-input" placeholder="Locality / city for delivery" />
+      <div class="drawer-radios">
+        <label class="drawer-radio">
+          <input type="radio" name="deliveryType" value="Showroom Pickup (Hathipole, Udaipur)" checked />
+          <span>Showroom Pickup</span>
+        </label>
+        <label class="drawer-radio">
+          <input type="radio" name="deliveryType" value="Home / Site Delivery" />
+          <span>Home / Site Delivery</span>
+        </label>
+      </div>
+      <button type="button" class="btn-whatsapp" id="btnSendWhatsApp">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 2C6.496 2 2 6.5 2 12.043c0 1.947.556 3.766 1.523 5.313L2.2 22l4.823-1.265c1.472.846 3.176 1.308 5.008 1.308 5.535 0 10.031-4.5 10.031-10.043C22.062 6.5 17.566 2 12.031 2zm5.856 14.17c-.244.686-1.42 1.314-1.954 1.393-.507.074-1.168.106-3.748-.962-3.136-1.302-5.143-4.52-5.3-4.732-.156-.212-1.272-1.696-1.272-3.235 0-1.54.805-2.298 1.09-2.593.284-.294.622-.368.83-.368.207 0 .415.002.597.011.192.01.448-.073.701.536.26.626.885 2.164.963 2.323.078.16.13.348.026.56-.104.212-.156.344-.312.529-.156.185-.328.413-.468.555-.156.157-.318.328-.137.64.181.312.805 1.332 1.728 2.155 1.186 1.057 2.186 1.385 2.498 1.541.312.157.494.138.676-.07.182-.208.78-.908.988-1.22.208-.312.416-.26.696-.156.28.104 1.777.838 2.083.993.306.155.51.233.584.363.074.13.074.75-.17 1.436z"/></svg>
+        Send Order via WhatsApp
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+{
+  "business": {
+    "name": "National Hardware",
+    "tagline": "House of Hardwares",
+    "owner": "Sunil Ji Seth",
+    "phone": "+91 9414058177",
+    "phoneRaw": "9414058177",
+    "whatsapp": "919414058177",
+    "address": "National Hardware, Ashwini Bazaar, Hathipole, Udaipur, Rajasthan 313001",
+    "pincode": "313001",
+    "city": "Udaipur",
+    "landmark": "Near Hathipole Gate, Ashwini Bazaar main road",
+    "timings": "Monday - Saturday: 10:00 AM - 8:30 PM | Sunday: 11:00 AM - 4:00 PM",
+    "googleMapsUrl": "https://maps.google.com/?q=National+Hardware+Ashwini+Bazaar+Hathipole+Udaipur+313001"
+  },
+  "finishTiers": {
+    "standard": {
+      "name": "Standard Architectural Finishes",
+      "codes": ["CP", "ZB", "SN"],
+      "labels": ["Chrome Plated (C.P)", "Z-Black Matte (Z.B)", "Satin Nickel (S.N)"]
+    },
+    "premium": {
+      "name": "Royal PVD & Luxury Finishes",
+      "codes": ["RG", "GD", "CB"],
+      "labels": ["Rose Gold (R.G)", "PVD Gold (G.D)", "Copper Bronze (C.B)"]
+    }
+  },
+  "deliveryZones": [
+    {
+      "zone": "Udaipur City Express",
+      "timeline": "Same-Day Dispatch (within 2-4 hours)",
+      "areas": ["Hathipole", "Ashwini Bazaar", "Delhi Gate", "Chetak Circle", "Panchwati", "Fatehpura", "Sukher", "Bhuwana", "Shobhagpura", "Hiran Magri (Sec 3-14)", "Goverdhan Vilas", "Pratap Nagar", "Bedla", "Rani Road", "Malla Talai"],
+      "rate": "Fast local courier / Store pickup available"
+    },
+    {
+      "zone": "Rajsamand & Nathdwara",
+      "timeline": "Next-Day Direct Express (24 hours)",
+      "areas": ["Nathdwara", "Kankroli", "Rajsamand City", "Amet", "Deogarh", "Railmagra"],
+      "rate": "Regional transport dispatch"
+    },
+    {
+      "zone": "Chittorgarh & Bhilwara",
+      "timeline": "1 - 2 Days Express Delivery",
+      "areas": ["Chittorgarh Fort Road", "Nimbahera", "Kapasan", "Bhilwara Textile Hub", "Mandal", "Gulabpura"],
+      "rate": "Safe packed parcel courier"
+    },
+    {
+      "zone": "Southern Rajasthan & Vagad",
+      "timeline": "1 - 2 Days Delivery",
+      "areas": ["Dungarpur", "Sagwara", "Banswara", "Partapur", "Salumber", "Sirohi", "Abu Road", "Mount Abu"],
+      "rate": "Direct bus/courier door-step delivery"
+    }
+  ],
+  "products": [
+    {
+      "id": "ah-ss-031",
+      "code": "AH-SS-031",
+      "name": "Candy Cut",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-031-candy-cut.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Architectural linear pull handle featuring precision diamond-cut bevels on the gripping edge. Modern, sleek, and durable for designer wardrobes and modular kitchens.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 140, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 196, "premium": 228, "box": 20 },
+        "224mm": { "standard": 225, "premium": 260, "box": 20 },
+        "288mm": { "standard": 252, "premium": 292, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": true,
+      "badge": "Bestseller"
+    },
+    {
+      "id": "ah-ss-032",
+      "code": "AH-SS-032",
+      "name": "Telephone",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-032-telephone.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Ergonomic cylindrical bridge handle with recessed finger rests inspired by vintage telephone contours. Luxurious tactile feel and robust tensile strength.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 130, "premium": 150, "box": 30 },
+        "128mm": { "standard": 150, "premium": 174, "box": 25 },
+        "192mm": { "standard": 178, "premium": 206, "box": 20 },
+        "224mm": { "standard": 212, "premium": 236, "box": 20 },
+        "288mm": { "standard": 236, "premium": 276, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": true,
+      "badge": "Ergonomic Masterpiece"
+    },
+    {
+      "id": "ah-ss-033",
+      "code": "AH-SS-033",
+      "name": "Rado Cut",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-033-rado-cut.jpg",
+      "material": "Heavy Stainless Steel 304",
+      "description": "Refined chamfered bar handle with high-precision mirror facet cuts. Inspired by luxury Swiss horology, delivering crisp shadows and modern elegance.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 139, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 192, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "192mm",
+      "featured": true,
+      "badge": "Designer Choice"
+    },
+    {
+      "id": "ah-ss-034",
+      "code": "AH-SS-034",
+      "name": "Diamond",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-034-diamond.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Prismatic diamond-ridged pull handle. Captures natural light with dual-angle reflections. Perfect for tall wardrobes, master bedrooms, and credenzas.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 139, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 192, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "224mm",
+      "featured": true,
+      "badge": "Popular"
+    },
+    {
+      "id": "ah-ss-035",
+      "code": "AH-SS-035",
+      "name": "Candy C",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-035-candy-c.jpg",
+      "material": "High Tensile SS-304",
+      "description": "Gracefully arched ergonomic C-profile handle with polished end stanchions. Blends traditional Rajasthan craftsmanship with European minimalism.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 140, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 192, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": false,
+      "badge": "Curved Contour"
+    },
+    {
+      "id": "ah-ss-036",
+      "code": "AH-SS-036",
+      "name": "Zupdi Cut",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-036-zupdi-cut.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Gabled hut-cut geometric silhouette with angular top ridges. Gives kitchen cabinets and entertainment units an ultra-contemporary presence.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 140, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 196, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "192mm",
+      "featured": false,
+      "badge": "Geometric"
+    },
+    {
+      "id": "ah-ss-037",
+      "code": "AH-SS-037",
+      "name": "Mini Rado",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-037-mini-rado.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Slimline rectangular minimalist handle. Highly economical without compromising on premium SS finish and weight. Exceptional value for whole-house renovations.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 104, "premium": 120, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 180, "premium": 208, "box": 20 },
+        "224mm": { "standard": 212, "premium": 245, "box": 20 },
+        "288mm": { "standard": 232, "premium": 273, "box": 20 }
+      },
+      "defaultSize": "96mm",
+      "featured": true,
+      "badge": "Best Value"
+    },
+    {
+      "id": "ah-ss-038",
+      "code": "AH-SS-038",
+      "name": "Round Square",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-038-round-square.jpg",
+      "material": "Grade 304 Stainless Steel",
+      "description": "Softened rectangular bridge handle seamlessly marrying rounded back curves with square end caps for smooth palm comfort during everyday use.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 139, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 192, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": false,
+      "badge": "Comfort Grip"
+    },
+    {
+      "id": "ah-ss-039",
+      "code": "AH-SS-039",
+      "name": "Cabrio",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-039-cabrio.jpg",
+      "material": "Ultra-Heavy Solid Cast SS",
+      "description": "Luxury dual-texture architectural handle with laser-embossed crackle inlay center and thick solid end stanchions. Designed for grand villa wardrobes and opulent interiors.",
+      "sizes": ["96mm", "160mm", "224mm"],
+      "prices": {
+        "96mm": { "standard": 220, "premium": 255, "box": 30 },
+        "160mm": { "standard": 320, "premium": 371, "box": 20 },
+        "224mm": { "standard": 392, "premium": 454, "box": 20 }
+      },
+      "defaultSize": "160mm",
+      "featured": true,
+      "badge": "Signature Luxury"
+    },
+    {
+      "id": "ah-ss-042",
+      "code": "AH-SS-042",
+      "name": "Square Patti",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-042-square-patti.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Modern square profile bar with contrasting center patti ribbon groove in crimson or onyx resin accent. Standout centerpiece for designer master wardrobes.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 150, "premium": 174, "box": 30 },
+        "128mm": { "standard": 174, "premium": 200, "box": 25 },
+        "192mm": { "standard": 222, "premium": 257, "box": 20 },
+        "224mm": { "standard": 246, "premium": 285, "box": 20 },
+        "288mm": { "standard": 270, "premium": 313, "box": 20 }
+      },
+      "defaultSize": "192mm",
+      "featured": true,
+      "badge": "Dual Accent"
+    },
+    {
+      "id": "ah-ss-049",
+      "code": "AH-SS-049",
+      "name": "Candy",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-049-candy.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Classic squared bar pull with rounded pillar mounts. Universally favored by Udaipur architects and interior contractors for seamless aesthetics.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 110, "premium": 127, "box": 30 },
+        "128mm": { "standard": 134, "premium": 155, "box": 25 },
+        "192mm": { "standard": 182, "premium": 212, "box": 20 },
+        "224mm": { "standard": 206, "premium": 238, "box": 20 },
+        "288mm": { "standard": 230, "premium": 266, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": false,
+      "badge": "Contractor Favorite"
+    },
+    {
+      "id": "ah-ss-051",
+      "code": "AH-SS-051",
+      "name": "Candy-Zupdi",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-051-candy-zupdi.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Slender arched bow handle with tapered chamfer ends. Adds an airy, flowing elegance to kitchen cabinets, bathroom vanities, and wardrobe banks.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 110, "premium": 127, "box": 30 },
+        "128mm": { "standard": 134, "premium": 155, "box": 25 },
+        "192mm": { "standard": 182, "premium": 212, "box": 20 },
+        "224mm": { "standard": 206, "premium": 238, "box": 20 },
+        "288mm": { "standard": 230, "premium": 266, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": false,
+      "badge": "Flowing Arch"
+    },
+    {
+      "id": "ah-ss-052",
+      "code": "AH-SS-052",
+      "name": "Round C",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-052-round-c.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Substantial tubular D-bar handle with deep mirror polish or dark PVD finish. Industrial-strength durability suited for heavy wooden shutters and drawers.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 88, "premium": 104, "box": 30 },
+        "128mm": { "standard": 132, "premium": 156, "box": 25 },
+        "192mm": { "standard": 176, "premium": 208, "box": 20 },
+        "224mm": { "standard": 220, "premium": 260, "box": 20 },
+        "288mm": { "standard": 264, "premium": 312, "box": 20 }
+      },
+      "defaultSize": "96mm",
+      "featured": false,
+      "badge": "Heavy Duty"
+    },
+    {
+      "id": "ah-ss-053",
+      "code": "AH-SS-053",
+      "name": "Square Patto",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-053-square-patto.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Architectural flat-plate handle with stepped square brackets. Minimalist flat bar profile that matches modern German kitchen aesthetics.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 110, "premium": 127, "box": 30 },
+        "128mm": { "standard": 134, "premium": 155, "box": 25 },
+        "192mm": { "standard": 182, "premium": 212, "box": 20 },
+        "224mm": { "standard": 206, "premium": 238, "box": 20 },
+        "288mm": { "standard": 230, "premium": 266, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": false,
+      "badge": "Modern Flat"
+    },
+    {
+      "id": "ah-ss-057",
+      "code": "AH-SS-057",
+      "name": "JP",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-057-jp.jpg",
+      "material": "Solid SS-304 with Center Channel Inlay",
+      "description": "Exquisite channel-groove bar handle with contrasting pinstripe detailing. Uncompromising symmetry and heavyweight solid feel.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 140, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 192, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "192mm",
+      "featured": true,
+      "badge": "Pinstripe Edition"
+    },
+    {
+      "id": "ah-ss-058",
+      "code": "AH-SS-058",
+      "name": "Zupdi",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-058-zupdi.jpg",
+      "material": "Grade 304 Solid Stainless Steel",
+      "description": "Crisp geometric peaked bar handle. Clean bevelled crest along the length catches ceiling spotlighting with sparkling brilliance.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 120, "premium": 140, "box": 30 },
+        "128mm": { "standard": 144, "premium": 168, "box": 25 },
+        "192mm": { "standard": 192, "premium": 222, "box": 20 },
+        "224mm": { "standard": 216, "premium": 250, "box": 20 },
+        "288mm": { "standard": 242, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "128mm",
+      "featured": false,
+      "badge": "Prism Ridge"
+    },
+    {
+      "id": "ah-ss-059",
+      "code": "AH-SS-059",
+      "name": "Diamond Cut",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-059-diamond-cut.jpg",
+      "material": "PVD Coated Heavy Solid Stainless Steel",
+      "description": "High-luxury multi-faceted diamond relief handle. Specially curated in Rose Gold, Champagne Bronze and Royal Gold for luxury residences.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm", "288mm"],
+      "prices": {
+        "96mm": { "standard": 136, "premium": 136, "box": 30 },
+        "128mm": { "standard": 160, "premium": 160, "box": 25 },
+        "192mm": { "standard": 208, "premium": 208, "box": 20 },
+        "224mm": { "standard": 232, "premium": 232, "box": 20 },
+        "288mm": { "standard": 278, "premium": 278, "box": 20 }
+      },
+      "defaultSize": "192mm",
+      "featured": true,
+      "badge": "Royal Facet"
+    },
+    {
+      "id": "ah-ss-060",
+      "code": "AH-SS-060",
+      "name": "Ovel-D",
+      "category": "cabinet-handles",
+      "categoryName": "S.S. Cabinet & Wardrobe Handles",
+      "image": "assets/products/ah-ss-060-ovel-d.jpg",
+      "material": "High Precision Polished SS",
+      "description": "Sleek rounded oval curved pull handle. Ultra lightweight feel yet exceptionally resilient. Extremely popular for modular drawers and kitchen units.",
+      "sizes": ["96mm", "128mm", "192mm", "224mm"],
+      "prices": {
+        "96mm": { "standard": 36, "premium": 42, "box": 30 },
+        "128mm": { "standard": 54, "premium": 62, "box": 25 },
+        "192mm": { "standard": 72, "premium": 82, "box": 20 },
+        "224mm": { "standard": 90, "premium": 105, "box": 20 }
+      },
+      "defaultSize": "96mm",
+      "featured": true,
+      "badge": "Budget Friendly"
+    }
+  ],
+  "extendedCategories": [
+    {
+      "id": "main-door-pulls",
+      "name": "Main Door Pull Handles",
+      "tagline": "Grand Architectural Statement Pulls (300mm to 1200mm)",
+      "image": "assets/branding/pull-handles-plaque.jpg",
+      "description": "Heavy-duty solid brass, forged bronze, and grade 304 stainless steel entrance pulls. Available in Antique Brass, PVD Matte Gold, Obsidian Black, and Textured Knurled finishes.",
+      "priceRange": "From ₹850 to ₹6,500+",
+      "items": [
+        "Royal Palace Knurled Brass Main Door Pull (450mm / 600mm)",
+        "Obsidian Matte Black Dual-Sided Back-to-Back Glass & Wooden Door Pulls",
+        "Vintage Champagne Bronze Sculpted Entrance Handle",
+        "Minimalist Square Column Pull (900mm & 1200mm Heavy Gauge)"
+      ]
+    },
+    {
+      "id": "mortise-locks",
+      "name": "Mortise & Digital Smart Locks",
+      "tagline": "High-Security Computerized & Biometric Access",
+      "image": "assets/branding/luxury-locks-box.jpg",
+      "description": "Aadhaya precision mortise lock bodies with computer dimple brass keys, double-throw anti-saw deadbolts, and modern biometric fingerprint smart locks.",
+      "priceRange": "From ₹650 to ₹14,500",
+      "items": [
+        "Aadhaya 60mm & 70mm High Security Euro Mortise Lock Body",
+        "Solid Brass Computer Dimple Key Cylinder with Turn Knob",
+        "Smart Fingerprint + RFID + Passcode Biometric Glass/Wood Door Lock",
+        "Heavy-Duty Zinc Alloy Designer Lever Handle with Mortise Combo"
+      ]
+    },
+    {
+      "id": "wardrobe-profiles",
+      "name": "Wardrobe, Kitchen & Concealed Profiles",
+      "tagline": "Modern Gola, Edge Pulls & Sleek Cabinet Extrusions",
+      "image": "assets/branding/flatlay-curated.jpg",
+      "description": "Seamless concealed handles for modern modular interiors. Includes J-profile, C-profile, continuous edge pulls, and push-to-open touch latches in brushed metallic shades.",
+      "priceRange": "From ₹180 to ₹1,250",
+      "items": [
+        "Continuous 2.5m Aluminum J & C Gola Profiles (Rose Gold & Black)",
+        "Slimline Edge Grip Pull for Acrylic & Laminate Shutters",
+        "Heavy Magnetic Touch-to-Open Push Catches",
+        "Brushed Champagne Gold Fluted Furniture Knobs"
+      ]
+    },
+    {
+      "id": "hinges-hardware",
+      "name": "Architectural Hinges & Tower Bolts",
+      "tagline": "Heavy Ball-Bearing Hinges, Soft-Close Hydraulics & Aldrops",
+      "image": "assets/branding/craftsmanship-banner.jpg",
+      "description": "Tested for over 200,000 opening cycles. Grade 304 SS butt hinges, parliamentary hinges, hydraulic soft-close 3D cabinet hinges, and solid brass tower bolts.",
+      "priceRange": "From ₹95 to ₹1,800",
+      "items": [
+        "SS-304 Heavy Ball Bearing Door Hinges (5x3x3mm & 4x3x3mm)",
+        "3D Clip-on Hydraulic Soft Close Concealed Cabinet Hinges",
+        "Solid Brass Antique Tower Bolts (6\" to 18\")",
+        "Heavy-Duty Designer Door Stoppers & Magnetic Holders"
+      ]
+    },
+    {
+      "id": "glass-bathroom",
+      "name": "Glass Hardware & Bathroom Accessories",
+      "tagline": "Shower Enclosures, Spider Fittings & Luxury Rail Systems",
+      "image": "assets/branding/flatlay-curated.jpg",
+      "description": "Premium 10mm/12mm frameless toughened glass hardware: wall-to-glass shower hinges, glass connectors, magnetic sealing profiles, and stainless steel luxury towel rods.",
+      "priceRange": "From ₹350 to ₹4,200",
+      "items": [
+        "Frameless Glass-to-Wall 90° Heavy Brass Shower Hinge (Gold & Black)",
+        "Stainless Steel Glass Connectors & Floor Pivots",
+        "Luxury Hotelier Grade Double Towel Rack with Hooks",
+        "Concealed Glass Door Sliding Rail Track Set"
+      ]
+    }
+  ]
+}
