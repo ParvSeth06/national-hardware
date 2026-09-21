@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnSendWhatsApp   = document.getElementById('btnSendWhatsApp');
   const custNameInput     = document.getElementById('custName');
   const custAddressInput  = document.getElementById('custAddress');
-  const deliveryTypeRadios = document.getElementsByName('deliveryType');
+  // Toast
+  const toastNotification = document.getElementById('toastNotification');
+  const toastMessage      = document.getElementById('toastMessage');
+  const toastCloseBtn     = document.getElementById('toastCloseBtn');
 
   // Modal
   const productModal      = document.getElementById('productModal');
@@ -456,6 +459,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const url = `https://wa.me/919414058177?text=${encodeURIComponent(msg)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
+
+      closeDrawer();
+      showToast('Your inquiry has been sent to National Hardware. You will be contacted within 24 hrs.');
+    });
+  }
+
+  /* ── TOAST NOTIFICATION ───────────────────────────────── */
+  let toastTimer = null;
+  function showToast(msg) {
+    if (!toastNotification) return;
+    if (toastMessage && msg) toastMessage.textContent = msg;
+    toastNotification.classList.add('show');
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toastNotification.classList.remove('show');
+    }, 7000);
+  }
+
+  if (toastCloseBtn && toastNotification) {
+    toastCloseBtn.addEventListener('click', () => {
+      toastNotification.classList.remove('show');
+      if (toastTimer) clearTimeout(toastTimer);
     });
   }
 
