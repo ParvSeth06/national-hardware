@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!q) return true;
       return (
         p.name.toLowerCase().includes(q) ||
-        p.code.toLowerCase().includes(q) ||
+        (p.code && p.code.toLowerCase().includes(q)) ||
         (p.categoryName || '').toLowerCase().includes(q)
       );
     });
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!filtered.length) {
       productsGrid.innerHTML = `
         <div class="empty-state">
-          <p>No models match "<strong>${q}</strong>".<br>Try searching by code like AH-SS-031 or by name like Rado, Diamond.</p>
+          <p>No models match "<strong>${q}</strong>".<br>Try searching by name like Rado, Diamond, Candy.</p>
         </div>`;
       return;
     }
@@ -160,14 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return `
       <article class="product-card" data-id="${p.id}">
         <div class="card-img-wrap" data-open-modal="${p.id}">
-          <img src="${p.image}" alt="${p.name} — ${p.code}" loading="lazy" />
+          <img src="${p.image}" alt="${p.name}${p.code ? ` — ${p.code}` : ''}" loading="lazy" />
         </div>
         <div class="card-body">
           <div class="card-top">
             <h3 class="card-name">${p.name}</h3>
             ${p.badge ? `<span class="card-badge">${p.badge}</span>` : ''}
           </div>
-          <span class="card-code">${p.code}</span>
+          ${p.code ? `<span class="card-code">${p.code}</span>` : ''}
 
           <div class="card-size-row">${sizePills}</div>
 
@@ -241,7 +241,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalImage.src       = product.image;
     modalImage.alt       = product.name;
-    modalCode.textContent = product.code;
+    if (modalCode) {
+      if (product.code) {
+        modalCode.textContent = product.code;
+        modalCode.style.display = '';
+      } else {
+        modalCode.textContent = '';
+        modalCode.style.display = 'none';
+      }
+    }
     modalName.textContent = product.name;
     modalDesc.textContent = product.description || '';
     modalMaterial.textContent = product.material || 'SS-304 Stainless Steel';
@@ -299,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       state.cart.push({
         id:        product.id,
-        code:      product.code,
+        code:      product.code || '',
         name:      product.name,
         size,
         tier,
@@ -379,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img class="drawer-item-img" src="${item.image}" alt="${item.name}" />
         <div class="drawer-item-info">
           <div class="drawer-item-name">${item.name}</div>
-          <div class="drawer-item-meta">${item.code} · ${item.size} · ${item.tierName}</div>
+          <div class="drawer-item-meta">${item.code ? `${item.code} · ` : ''}${item.size} · ${item.tierName}</div>
           <div class="drawer-qty-row">
             <button type="button" class="qty-btn" data-qty-index="${idx}" data-delta="-1" title="Decrease quantity">−</button>
             <span class="qty-val">${item.qty}</span>
@@ -437,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const delivery = [...deliveryTypeRadios].find(r => r.checked)?.value || 'Showroom Pickup';
 
       const items = state.cart.map(i =>
-        `• ${i.name} (${i.code}) — ${i.size} — ${i.tierName} — Qty: ${i.qty} — ₹${(i.price * i.qty).toLocaleString('en-IN')}`
+        `• ${i.name}${i.code ? ` (${i.code})` : ''} — ${i.size} — ${i.tierName} — Qty: ${i.qty} — ₹${(i.price * i.qty).toLocaleString('en-IN')}`
       ).join('\n');
 
       const total = state.cart.reduce((s, i) => s + i.price * i.qty, 0);
