@@ -515,4 +515,90 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
+  /* ── STAIRS CAROUSEL & CART ────────────────────────────── */
+  const stairsTrack   = document.getElementById('stairsTrack');
+  const stairsPrevBtn = document.getElementById('stairsPrevBtn');
+  const stairsNextBtn = document.getElementById('stairsNextBtn');
+  const stairsBadge   = document.getElementById('stairsBadge');
+  const stairsDots    = document.getElementById('stairsDots');
+  const addStairsBtn  = document.getElementById('addStairsToCartBtn');
+
+  if (stairsTrack) {
+    let currentSlide = 0;
+    const totalSlides = 3;
+
+    function updateCarousel(index) {
+      currentSlide = (index + totalSlides) % totalSlides;
+      stairsTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      if (stairsBadge) stairsBadge.textContent = `${currentSlide + 1} / ${totalSlides}`;
+      if (stairsDots) {
+        const dots = stairsDots.querySelectorAll('.dot');
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentSlide);
+        });
+      }
+    }
+
+    if (stairsPrevBtn) {
+      stairsPrevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateCarousel(currentSlide - 1);
+      });
+    }
+
+    if (stairsNextBtn) {
+      stairsNextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        updateCarousel(currentSlide + 1);
+      });
+    }
+
+    if (stairsDots) {
+      stairsDots.querySelectorAll('.dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+          const slideIdx = Number(dot.dataset.slide);
+          if (!isNaN(slideIdx)) updateCarousel(slideIdx);
+        });
+      });
+    }
+
+    // Touch swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const stairsCarousel = document.getElementById('stairsCarousel');
+    if (stairsCarousel) {
+      stairsCarousel.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      stairsCarousel.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        if (touchStartX - touchEndX > 40) updateCarousel(currentSlide + 1);
+        if (touchEndX - touchStartX > 40) updateCarousel(currentSlide - 1);
+      }, { passive: true });
+    }
+  }
+
+  if (addStairsBtn) {
+    addStairsBtn.addEventListener('click', () => {
+      const stairsProduct = {
+        id: "stairs-01",
+        code: "",
+        name: "Architectural SS & Glass Staircase",
+        category: "stairs",
+        categoryName: "Stainless Steel & Glass Stairs",
+        image: "assets/stairs/stairs-1.jpg",
+        material: "Grade 304 Solid Stainless Steel & Toughened Glass",
+        description: "Custom-engineered modern stainless steel and glass stair railing system.",
+        sizes: ["Per Running Ft"],
+        prices: {
+          "Per Running Ft": { standard: 2000, premium: 2000, box: 1 }
+        },
+        defaultSize: "Per Running Ft",
+        featured: true
+      };
+      addToCart(stairsProduct);
+    });
+  }
+
 });
