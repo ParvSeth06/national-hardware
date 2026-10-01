@@ -516,12 +516,46 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ── STAIRS CAROUSEL & CART ────────────────────────────── */
-  const stairsTrack   = document.getElementById('stairsTrack');
-  const stairsPrevBtn = document.getElementById('stairsPrevBtn');
-  const stairsNextBtn = document.getElementById('stairsNextBtn');
-  const stairsBadge   = document.getElementById('stairsBadge');
-  const stairsDots    = document.getElementById('stairsDots');
-  const addStairsBtn  = document.getElementById('addStairsToCartBtn');
+  const stairsTrack       = document.getElementById('stairsTrack');
+  const stairsPrevBtn     = document.getElementById('stairsPrevBtn');
+  const stairsNextBtn     = document.getElementById('stairsNextBtn');
+  const stairsBadge       = document.getElementById('stairsBadge');
+  const stairsDots        = document.getElementById('stairsDots');
+  const addStairsBtn      = document.getElementById('addStairsToCartBtn');
+  const stairsVariantChips= document.getElementById('stairsVariantChips');
+  const stairsPriceVal    = document.getElementById('stairsPriceVal');
+  const waStairsBtn       = document.getElementById('waStairsBtn');
+
+  let activeStairsVariant = {
+    variant: '5step',
+    name: '5 Step Stairs',
+    price: 2750
+  };
+
+  if (stairsVariantChips) {
+    stairsVariantChips.addEventListener('click', e => {
+      const chip = e.target.closest('.size-chip');
+      if (!chip) return;
+      
+      stairsVariantChips.querySelectorAll('.size-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      activeStairsVariant = {
+        variant: chip.dataset.variant,
+        name: chip.dataset.name,
+        price: Number(chip.dataset.price)
+      };
+
+      if (stairsPriceVal) {
+        stairsPriceVal.textContent = `₹${activeStairsVariant.price.toLocaleString('en-IN')}`;
+      }
+
+      if (waStairsBtn) {
+        const msg = `Hello Sunil Ji Seth, I am interested in the Stainless Steel ${activeStairsVariant.name} (Price ₹${activeStairsVariant.price.toLocaleString('en-IN')}).`;
+        waStairsBtn.href = `https://wa.me/919414058177?text=${encodeURIComponent(msg)}`;
+      }
+    });
+  }
 
   if (stairsTrack) {
     let currentSlide = 0;
@@ -581,20 +615,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (addStairsBtn) {
     addStairsBtn.addEventListener('click', () => {
+      const v = activeStairsVariant;
       const stairsProduct = {
-        id: "stairs-01",
+        id: `stairs-${v.variant}`,
         code: "",
-        name: "Architectural SS & Glass Staircase",
+        name: `Stainless Steel ${v.name}`,
         category: "stairs",
-        categoryName: "Stainless Steel & Glass Stairs",
+        categoryName: "Stainless Steel Step Stairs",
         image: "assets/stairs/stairs-1.jpg",
-        material: "Grade 304 Solid Stainless Steel & Toughened Glass",
-        description: "Custom-engineered modern stainless steel and glass stair railing system.",
-        sizes: ["Per Running Ft"],
+        material: "Heavy-Duty Solid Stainless Steel",
+        description: "Sturdy, lightweight stainless steel step stairs for everyday use across any home.",
+        sizes: [v.name],
         prices: {
-          "Per Running Ft": { standard: 2000, premium: 2000, box: 1 }
+          [v.name]: { standard: v.price, premium: v.price, box: 1 }
         },
-        defaultSize: "Per Running Ft",
+        defaultSize: v.name,
         featured: true
       };
       addToCart(stairsProduct);

@@ -1298,7 +1298,34 @@ button { cursor: pointer; font-family: var(--font-sans); }
   color: var(--text-muted);
   font-size: 0.92rem;
   line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.stairs-variant-picker {
   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stairs-variant-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.stairs-variant-chips {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.stairs-variant-chips .size-chip {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+  border-radius: var(--r-sm);
 }
 
 .stairs-features {

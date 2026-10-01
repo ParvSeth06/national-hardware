@@ -119,10 +119,10 @@
     <div class="container">
       <div class="catalog-header">
         <div>
-          <span class="stairs-kicker">Architectural Fabrication</span>
-          <h2 class="section-title">Stainless Steel &amp; Glass Stairs</h2>
+          <span class="stairs-kicker">Utility &amp; Home Solutions</span>
+          <h2 class="section-title">Stainless Steel Step Stairs</h2>
         </div>
-        <span class="product-count">Custom Design</span>
+        <span class="product-count">2 Variants</span>
       </div>
 
       <div class="stairs-grid">
@@ -132,9 +132,9 @@
             <button type="button" class="carousel-arrow carousel-prev" id="stairsPrevBtn" aria-label="Previous image">‹</button>
             <div class="carousel-track-container">
               <div class="carousel-track" id="stairsTrack">
-                <div class="carousel-slide"><img src="assets/stairs/stairs-1.jpg" alt="Stainless Steel Stair Railing - View 1" loading="lazy" /></div>
-                <div class="carousel-slide"><img src="assets/stairs/stairs-2.jpg" alt="Stainless Steel Stair Railing - View 2" loading="lazy" /></div>
-                <div class="carousel-slide"><img src="assets/stairs/stairs-3.jpg" alt="Stainless Steel Stair Railing - View 3" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="assets/stairs/stairs-1.jpg" alt="Stainless Steel Step Stairs - View 1" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="assets/stairs/stairs-2.jpg" alt="Stainless Steel Step Stairs - View 2" loading="lazy" /></div>
+                <div class="carousel-slide"><img src="assets/stairs/stairs-3.jpg" alt="Stainless Steel Step Stairs - View 3" loading="lazy" /></div>
               </div>
             </div>
             <button type="button" class="carousel-arrow carousel-next" id="stairsNextBtn" aria-label="Next image">›</button>
@@ -151,33 +151,39 @@
           <div class="stairs-card-body">
             <div>
               <div class="stairs-top">
-                <h3 class="stairs-title">Architectural SS &amp; Glass Staircase</h3>
-                <span class="card-badge">Custom Built</span>
+                <h3 class="stairs-title" id="stairsTitle">Stainless Steel Step Stairs</h3>
+                <span class="card-badge">Sturdy &amp; Durable</span>
               </div>
               
               <p class="stairs-desc">
-                Custom-engineered modern stainless steel and glass stair railing system. Precision-built for luxury villas, duplex homes, and commercial spaces with exceptional structural strength and sleek aesthetics.
+                High-strength stainless steel step stairs built for stability and convenience. Space-saving, elegant, and designed for easy everyday use across any home.
               </p>
 
+              <div class="stairs-variant-picker">
+                <span class="stairs-variant-label">Select Option / Variant:</span>
+                <div class="stairs-variant-chips" id="stairsVariantChips">
+                  <button type="button" class="size-chip active" data-variant="5step" data-name="5 Step Stairs" data-price="2750">5 Step (₹2,750)</button>
+                  <button type="button" class="size-chip" data-variant="6step" data-name="6 Step Stairs" data-price="3300">6 Step (₹3,300)</button>
+                </div>
+              </div>
+
               <ul class="stairs-features">
-                <li><span>Material:</span> Grade 304 Solid Stainless Steel &amp; Toughened Glass</li>
-                <li><span>Finish:</span> Satin Brushed, Mirror Polish &amp; Custom Tint Options</li>
-                <li><span>Application:</span> Luxury Villas, Duplex Stairs &amp; Commercial Balustrades</li>
-                <li><span>Fitting:</span> On-site precision laser measurement &amp; installation</li>
+                <li><span>Material:</span> Heavy-Duty Solid Stainless Steel</li>
+                <li><span>Application:</span> Perfect for any home for everyday purpose</li>
               </ul>
             </div>
 
             <div class="stairs-footer">
               <div class="stairs-price-box">
-                <span class="price-val">₹2,000</span>
-                <span class="price-unit">/ running ft</span>
+                <span class="price-val" id="stairsPriceVal">₹2,750</span>
+                <span class="price-unit" id="stairsPriceUnit">/ unit</span>
               </div>
               <div class="stairs-actions">
-                <button type="button" class="btn-primary" id="addStairsToCartBtn" title="Add staircase system to quote cart">
+                <button type="button" class="btn-primary" id="addStairsToCartBtn" title="Add step stairs to quote cart">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
                   + Add to Cart
                 </button>
-                <a href="https://wa.me/919414058177?text=Hello%20Sunil%20Ji%20Seth,%20I%20am%20interested%20in%20the%20Architectural%20SS%20%26%20Glass%20Staircase%20(Rate%20%E2%82%B92,000)." target="_blank" rel="noopener" class="btn-ghost wa-stairs-btn">
+                <a href="https://wa.me/919414058177?text=Hello%20Sunil%20Ji%20Seth,%20I%20am%20interested%20in%20the%20Stainless%20Steel%205%20Step%20Stairs%20(Price%20%E2%82%B92,750)." target="_blank" rel="noopener" class="btn-ghost wa-stairs-btn" id="waStairsBtn">
                   WhatsApp Inquiry
                 </a>
               </div>
