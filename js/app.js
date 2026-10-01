@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         state.selectedSizes[p.id] = p.defaultSize || p.sizes[0];
       });
 
+      injectGoogleShoppingSchemas(state.products);
       renderProducts();
     })
     .catch(() => {
@@ -634,6 +635,118 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       addToCart(stairsProduct);
     });
+  }
+
+  /* ── HERO SLIDER (2s AUTO ROTATE FROM RIGHT) ───────────── */
+  const heroTrack = document.getElementById('heroSliderTrack');
+  const heroDots  = document.getElementById('heroSliderDots');
+  const heroSliderSection = document.getElementById('hero');
+
+  if (heroTrack) {
+    let currentHeroSlide = 0;
+    const totalHeroSlides = 3;
+    let heroInterval = null;
+
+    function goToHeroSlide(index) {
+      currentHeroSlide = (index + totalHeroSlides) % totalHeroSlides;
+      heroTrack.style.transform = `translateX(-${currentHeroSlide * 100}%)`;
+
+      if (heroDots) {
+        heroDots.querySelectorAll('.hero-dot').forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentHeroSlide);
+        });
+      }
+    }
+
+    function startHeroAutoRotate() {
+      stopHeroAutoRotate();
+      heroInterval = setInterval(() => {
+        goToHeroSlide(currentHeroSlide + 1);
+      }, 2000); // 2 seconds
+    }
+
+    function stopHeroAutoRotate() {
+      if (heroInterval) {
+        clearInterval(heroInterval);
+        heroInterval = null;
+      }
+    }
+
+    if (heroDots) {
+      heroDots.querySelectorAll('.hero-dot').forEach(dot => {
+        dot.addEventListener('click', () => {
+          const slideIdx = Number(dot.dataset.heroSlide);
+          if (!isNaN(slideIdx)) {
+            goToHeroSlide(slideIdx);
+            startHeroAutoRotate();
+          }
+        });
+      });
+    }
+
+    if (heroSliderSection) {
+      heroSliderSection.addEventListener('mouseenter', stopHeroAutoRotate);
+      heroSliderSection.addEventListener('mouseleave', startHeroAutoRotate);
+    }
+
+    startHeroAutoRotate();
+  }
+
+  /* ── GOOGLE SHOPPING & SEARCH STRUCTURED DATA ─────────── */
+  function injectGoogleShoppingSchemas(products) {
+    if (!products || !products.length) return;
+    const oldScript = document.getElementById('googleShoppingSchema');
+    if (oldScript) oldScript.remove();
+
+    const baseUrl = window.location.protocol + '//' + window.location.host + window.location.pathname.replace(/index\.html$/, '');
+
+    const productListSchema = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "National Hardware Udaipur Product Catalogue",
+      "description": "Full product catalog of stainless steel handles, door pulls, step stairs, and locks at National Hardware Udaipur.",
+      "itemListElement": products.map((p, index) => {
+        const defaultPd = p.prices ? p.prices[p.defaultSize || p.sizes[0]] : null;
+        const minPrice = defaultPd ? defaultPd.standard : 100;
+        const maxPrice = defaultPd ? defaultPd.premium : minPrice;
+        return {
+          "@type": "ListItem",
+          "position": index + 1,
+          "item": {
+            "@type": "Product",
+            "name": `${p.name} Stainless Steel Handle - National Hardware Udaipur`,
+            "image": baseUrl + p.image,
+            "description": p.description || `${p.name} handle available at National Hardware in Hathipole, Udaipur.`,
+            "sku": p.id,
+            "mpn": p.id,
+            "brand": {
+              "@type": "Brand",
+              "name": "National Hardware Udaipur"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "INR",
+              "lowPrice": String(minPrice),
+              "highPrice": String(maxPrice),
+              "offerCount": String(p.sizes ? p.sizes.length : 1),
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": {
+                "@type": "Organization",
+                "name": "National Hardware Udaipur",
+                "telephone": "+91-9414058177"
+              }
+            }
+          }
+        };
+      })
+    };
+
+    const script = document.createElement('script');
+    script.id = 'googleShoppingSchema';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(productListSchema);
+    document.head.appendChild(script);
   }
 
 });

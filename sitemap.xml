@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://nationalhardware.in/</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://nationalhardware.in/assets/branding/wardrobe-hardware-hero.jpg</image:loc>
+      <image:title>National Hardware Udaipur - Wardrobe Hardware Collection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nationalhardware.in/assets/branding/modular-kitchen-hardware-guide-banner.jpg</image:loc>
+      <image:title>National Hardware Udaipur - Modular Kitchen Hardware</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://nationalhardware.in/assets/branding/Designed%20for%20Everyday%20Elegance.png</image:loc>
+      <image:title>National Hardware Udaipur - Designed for Everyday Elegance</image:title>
+    </image:image>
+  </url>
+</urlset>
